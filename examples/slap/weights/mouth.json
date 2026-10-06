@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "variant": "mouth",
+  "model_seed": 10,
+  "weights_file": "mouth.pt",
+  "weights_sha256": "d10bac10e319a4c0fa79d3a6d5731e9fa1cce148c73ab53cabb9e1e84fcc2b9f",
+  "model_config": {
+    "sample_rate": 16000,
+    "frame_hz": 30,
+    "bin_times": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "encoder_type": "pose",
+    "cpc_model_pt": "default",
+    "linear_in_dim": 0,
+    "pose_modalities": "mouth",
+    "pose_fusion": "concat",
+    "pose_dim_total": 411,
+    "freeze_encoder": 0,
+    "load_pretrained": 1,
+    "only_feature_extraction": 0,
+    "dim": 256,
+    "channel_layers": 1,
+    "cross_layers": 3,
+    "num_heads": 4,
+    "dropout": 0.1,
+    "context_limit": -1,
+    "context_limit_cpc_sec": -1,
+    "lid_classify": 0,
+    "lid_classify_num_class": 3,
+    "lid_classify_adversarial": 0,
+    "lang_cond": 0
+  },
+  "event_config": {
+    "min_context_time": 3,
+    "metric_time": 0.2,
+    "metric_pad_time": 0.05,
+    "max_time": 20,
+    "frame_hz": 30,
+    "equal_hold_shift": 1,
+    "prediction_region_time": 0.5,
+    "sh_pre_cond_time": 1.0,
+    "sh_post_cond_time": 1.0,
+    "sh_prediction_region_on_active": true,
+    "bc_pre_cond_time": 1.0,
+    "bc_post_cond_time": 1.0,
+    "bc_max_duration": 1.0,
+    "bc_negative_pad_left_time": 1.0,
+    "bc_negative_pad_right_time": 2.0,
+    "long_onset_region_time": 0.2,
+    "long_onset_condition_time": 1.0
+  },
+  "source_checkpoint": {
+    "filename": "VapGPT_30Hz_ad20s_134_enc-tuned_seed10-epoch27-val_3.07636.ckpt",
+    "sha256": "5561d023e91abf8ade13fcb3a7532270fcd9d48dab436e70c4225cd3709f4687"
+  },
+  "training_corpus": "Public DGS Corpus",
+  "jsl_fine_tuning": false,
+  "weights_size_bytes": 14538354
+}

@@ -1,0 +1,7 @@
+# Install the desired torch CPU/CUDA build first.
+# Public runtime; historical reference versions are recorded separately in README.
+torch==2.10.0
+numpy==2.3.5
+einops==0.7.0
+# FFmpeg/ffprobe and OpenPose are separately installed command-line tools.
+# Normal inference does not require Lightning or torchaudio.

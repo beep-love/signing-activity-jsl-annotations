@@ -1,0 +1,7 @@
+variant,projection_nll_macro_recording,projection_nll_source,shift_hold_balanced_accuracy,shift_hold_macro_f1,shift_hold_n_scored_frames,shift_pred_balanced_accuracy,shift_pred_macro_f1,shift_pred_n_scored_frames
+hands,5.4644,supplied_baseline_table_four_decimals,0.43533994567906664,0.43271165138616774,853,0.4603174603174603,0.44756281606608594,195
+eyes,4.1968,supplied_baseline_table_four_decimals,0.45274133779043557,0.44872186040319095,853,0.3134920634920635,0.3126578282828283,195
+mouth,5.6246,supplied_baseline_table_four_decimals,0.46908435139266114,0.4688864606313011,853,0.403968253968254,0.3902374390502438,195
+hands_eyes_mouth,6.3997,supplied_baseline_table_four_decimals,0.40285459803608936,0.38961573135001126,853,0.373015873015873,0.3592325630697477,195
+uniform_256,5.5452,analytical_ln_256,,,,,,
+constant_hold_no_shift,,,0.5,0.33098039215686276,853,0.5,0.3157894736842105,195

@@ -1,0 +1,9 @@
+SLAP example licensing
+
+The example source code is provided under the MIT License in model/LICENSE.
+It includes code adapted from MaAI and the RO-MAN SLAP implementation.
+Source provenance is recorded in model/SOURCE_MANIFEST.json.
+
+Model weights are governed by weights/LICENSE_WEIGHTS.md.
+Additional JSL annotations are governed by the repository-root LICENSE.
+External dependencies retain their respective licenses.

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "original_source": {
+    "MaAI-main/train/model.py": "b416740be1dd37ca6682b8c235fc05ee024f3b66d4c13004b6cdb80704678e4d",
+    "MaAI-main/train/modules.py": "83c5378b35a26d46dc66a79ff0ce0c5c98ae106a1eb83086a1b3c0ba355e8b58",
+    "MaAI-main/train/objective.py": "2dbb5853d46566d24fe48e14ecc544e66c812392aab9873426fd31915b987484",
+    "MaAI-main/train/events.py": "1c113b370ba508a1c84586d3d31dd22217a33d2c6be1fb9822976ee5f8afdfd2",
+    "MaAI-main/train/utils.py": "3181253a6d4e06e116bd4595c1d7e7d29dcbcdbe1dcb4ec659c0424ae21b09bf",
+    "MaAI-main/train/audio.py": "c1c0d421043868a4d5fcf270367ab8740eba3382094a1a29e6730e6813205dfc",
+    "MaAI-main/train/encoder.py": "b27d5652c2d3aaa4ece32bab2b3daa936de336edaf7756e147e5cb0093668c13",
+    "MaAI-main/train/encoder_components.py": "a88a83ed180c92ab6d659616e0d1e13d001522d30aac0df268e664252a44a134"
+  },
+  "original_preparation_sha256": "ecb8aa38642018cf79479e2c3ab39fa20c02fb549237db5f81d63336be6a52a3",
+  "adaptations": [
+    "Relative package imports replace top-level imports.",
+    "Audio-only encoder construction and old checkpoint helpers are omitted; the pose forward and tensor keys are preserved.",
+    "Only three used preparation functions and required tensor utilities are included verbatim.",
+    "The public loader accepts tensor-only state dictionaries plus JSON configuration.",
+    "The evaluation formulas are retained; local source path resolution is replaced by bundled model code.",
+    "Event scoring uses all saved windows by default (drop_last=False)."
+  ],
+  "extracted_functions": {
+    "_segments_to_frame_labels": "6cab33c43552e2baab270069a9bf030fe73bf4a39764528f6e2de0d0de0f7902",
+    "_extract_keypoints_2d": "36e786ba7f87edde1f1914dd2c580a77afebd5c02b324e84ad52bc17e41aee74",
+    "_labels_to_segments_rel_sec": "7d576c363033ceb93cc6753a8f7950cc294eceda575fe3a27ed49b8f26c3edf1",
+    "find_island_idx_len": "309a03758e3d662e496c0e394cc886aca1296abcaecb412e7eec2ec0dde97fbe",
+    "everything_deterministic": "4c0e4ceca7d96a1e2dbeeefbba6b6746ac9f6a0f8ff2a8f96ca8e6bcb0c03cd1",
+    "vad_list_to_onehot": "62bc2a8d9b913a588efa9ce44cec4d6203cff6b5332cccfd645eb04e0cc5e774",
+    "vad_fill_silences": "2efdb73e87a133f2756197bac8004b433326b73ae7665294340e1367339394cd",
+    "vad_omit_spikes": "edba7c06b18849c1278297235bcdb724d48456b827018f2f04caee30d5e8e92a"
+  },
+  "packaged_files_sha256": {
+    "model/__init__.py": "ceff548a7e75dc6c363c2abbd5c7be164bb719dc0ffa2fc6638300158bf703ec",
+    "model/events.py": "d74f9b0bc45de00d36382dae100556ce33d242b1909db14f3aefe309c2106ac2",
+    "model/modules.py": "a19ffcc68aed24621d8e12e21da994b84a082dd0f6c887e8906b9643439d97c8",
+    "model/network.py": "fa8f23de30ebac51c43824341b851da812042f22a9b72ac4e8e12e41363c882a",
+    "model/objective.py": "81f099189a0ade45b16c631afb047e1cc06f4ea6426f3fea20a2c80b1fd093b3",
+    "model/pipeline/__init__.py": "8cca4f7cf579b91168e1f4c3f48385a023972d28fbb77cd6b60ad9664bb5d6bb",
+    "model/pipeline/cli.py": "df8b969e90e8aaf21d83fb9726af3468fddfca67f39b9a1165378a19b60336e6",
+    "model/pipeline/common.py": "293cb6231f0e0a26f4a36f09869af817d75b2f0b6f86ede2ee6a93f2c264f612",
+    "model/pipeline/evaluate.py": "38f283a74edaf9184996d087d686ebc88f925292f918c7d1a68e0a772d8f060b",
+    "model/pipeline/event_metrics.py": "6ba65dfb2c74978f80f57addb103333242741d6e1868bd84b1fd84e8050c9a68",
+    "model/pipeline/features.py": "d34854286e1cf19afb0de51c99a028f814497d6d0708cd1f412771f779c86899",
+    "model/pipeline/media.py": "a3a9f2ffa9610839456e379ca510a18959a10b979bcd11b2746a6ce56ec3001c",
+    "model/preprocessing.py": "4bfaac17534c3f202d4dc268006adab5192748d081f719f996ea02eb494fce82",
+    "model/source.py": "1b32c62165e174af2581f6e1855fba24a1fb9b5193ba915e0a403dac693f73e2",
+    "model/utils.py": "2be64df5c9561d85b58046e1262728a7c6419090ad8063852d77eb4f6f4be3fa"
+  }
+}

@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+local/
+work/
+work_*/
+runs/
+reports/
+*.log
+*.out
+*.err
+*.npz
+*.npy
+*.ckpt
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.wav
+*.pfsx
+# Tensor-only exported weights are intended to be tracked directly.
+!/weights/*.pt

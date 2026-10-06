@@ -1,0 +1,8 @@
+tag,recording_id,n_evaluated_windows,raw_shift,raw_hold,raw_pred_shift,raw_pred_hold,shift_n_selected_events,shift_n_nonempty_scored_events,shift_n_scored_frames,hold_n_selected_events,hold_n_nonempty_scored_events,hold_n_scored_frames,pred_shift_n_selected_events,pred_shift_n_nonempty_scored_events,pred_shift_n_scored_frames,pred_shift_neg_n_selected_events,pred_shift_neg_n_nonempty_scored_events,pred_shift_neg_n_scored_frames
+ani1,FO_09_10_AniN,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cur1,IS_09_10_Cur,16,4,6,4,6,4,4,381,4,4,321,4,4,60,4,4,60
+pro1,NS_11_12_Pro,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ani2,IK_01_02_AniN,21,1,5,1,5,1,1,17,1,1,40,1,1,15,1,1,15
+cur2,IK_05_06_Cur,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pro2,IK_03_04_Pro,19,2,1,2,1,2,2,33,1,1,61,2,2,30,1,1,15
+ALL_POOLED,ALL_POOLED,109,7,12,7,12,7,7,431,6,6,422,7,7,105,6,6,90

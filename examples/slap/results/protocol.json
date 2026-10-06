@@ -1,0 +1,1694 @@
+{
+  "schema_version": 1,
+  "result_set_id": "dgs_zero_shot_seed10_all_saved_windows",
+  "source_run_status": "completed",
+  "evaluation_type": "supplementary_VAP_style_proxy_events",
+  "model_selection": "Frozen seed10 checkpoints. Selection based on the listed DGS validation checkpoints; JSL thresholds are not tuned.",
+  "training_corpus": "Public DGS Corpus (RO-MAN checkpoints)",
+  "jsl_fine_tuning": false,
+  "model_seed": 10,
+  "projection_nll": {
+    "aggregation": "unweighted mean of the six per-recording mean NLL values",
+    "logarithm": "natural",
+    "unit": "nats",
+    "value_source": "supplied baseline_table(1).md; values preserved to four decimal places",
+    "recomputed_from_probabilities_in_this_result_package": false,
+    "n_saved_windows": 109,
+    "n_scored_frame_times": 65400,
+    "macro_by_variant": {
+      "hands": 5.4644,
+      "eyes": 4.1968,
+      "mouth": 5.6246,
+      "hands_eyes_mouth": 6.3997
+    },
+    "uniform_256_nll": 5.545177444479562
+  },
+  "event_metrics": {
+    "primary_task_keys": [
+      "hs",
+      "pred_shift"
+    ],
+    "primary_unit": "frame",
+    "pooling": "sum confusion matrices across selected event frames before computing metrics",
+    "primary_f1_average": "macro",
+    "reference_f1_average": "weighted",
+    "alternative_event_mean_task_keys": [
+      "hs2",
+      "pred_shift2"
+    ],
+    "class_labels": {
+      "hs": {
+        "0": "HOLD",
+        "1": "SHIFT"
+      },
+      "pred_shift": {
+        "0": "no-shift",
+        "1": "shift"
+      }
+    },
+    "missing_class_support": "N/A (CSV empty field, not zero)",
+    "probability_threshold_rule": "torch.round; exact 0.5 maps to class 0",
+    "constant_baseline": "always class 0: HOLD / no-shift",
+    "sampling_is_identical_across_variants": true,
+    "saved_window_scope": "all available saved evaluation windows, not all raw video frames"
+  },
+  "event_config": {
+    "min_context_time": 3,
+    "metric_time": 0.2,
+    "metric_pad_time": 0.05,
+    "max_time": 20,
+    "frame_hz": 30,
+    "equal_hold_shift": 1,
+    "prediction_region_time": 0.5,
+    "sh_pre_cond_time": 1.0,
+    "sh_post_cond_time": 1.0,
+    "sh_prediction_region_on_active": true,
+    "bc_pre_cond_time": 1.0,
+    "bc_post_cond_time": 1.0,
+    "bc_max_duration": 1.0,
+    "bc_negative_pad_left_time": 1.0,
+    "bc_negative_pad_right_time": 2.0,
+    "long_onset_region_time": 0.2,
+    "long_onset_condition_time": 1.0
+  },
+  "sampling": {
+    "seed": 0,
+    "batch_size": 8,
+    "drop_last": false,
+    "window_order": [
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 0,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 1200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 1800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 2400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 3000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 3600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 4200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 4800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 5400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 6000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 6600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 7200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani1",
+        "recording_id": "FO_09_10_AniN",
+        "start": 7800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 0,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 1200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 1800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 2400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 3000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 3600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 4200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 4800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 5400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 6000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 6600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 7200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 7800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 8400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur1",
+        "recording_id": "IS_09_10_Cur",
+        "start": 9000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 0,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 1200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 1800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 2400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 3000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 3600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 4200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 4800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 5400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 6000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 6600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 7200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 7800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro1",
+        "recording_id": "NS_11_12_Pro",
+        "start": 8400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 0,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 1200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 1800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 2400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 3000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 3600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 4200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 4800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 5400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 6000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 6600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 7200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 7800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 8400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 9000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 9600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 10200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 10800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 11400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "ani2",
+        "recording_id": "IK_01_02_AniN",
+        "start": 12000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 0,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 1200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 1800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 2400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 3000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 3600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 4200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 4800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 5400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 6000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 6600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 7200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 7800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 8400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 9000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 9600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 10200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 10800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 11400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 12000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 12600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 13200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "cur2",
+        "recording_id": "IK_05_06_Cur",
+        "start": 13800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 0,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 1200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 1800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 2400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 3000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 3600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 4200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 4800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 5400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 6000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 6600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 7200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 7800,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 8400,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 9000,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 9600,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 10200,
+        "width": 600,
+        "hz": 30
+      },
+      {
+        "tag": "pro2",
+        "recording_id": "IK_03_04_Pro",
+        "start": 10800,
+        "width": 600,
+        "hz": 30
+      }
+    ],
+    "n_available_windows": 109,
+    "n_used_windows": 109,
+    "dropped_windows": [],
+    "final_sampling_carry": {
+      "shift": 1,
+      "pred_shift": 1,
+      "pred_backchannel": 0
+    }
+  },
+  "recordings_in_order": [
+    {
+      "tag": "ani1",
+      "recording_id": "FO_09_10_AniN"
+    },
+    {
+      "tag": "cur1",
+      "recording_id": "IS_09_10_Cur"
+    },
+    {
+      "tag": "pro1",
+      "recording_id": "NS_11_12_Pro"
+    },
+    {
+      "tag": "ani2",
+      "recording_id": "IK_01_02_AniN"
+    },
+    {
+      "tag": "cur2",
+      "recording_id": "IK_05_06_Cur"
+    },
+    {
+      "tag": "pro2",
+      "recording_id": "IK_03_04_Pro"
+    }
+  ],
+  "checkpoints": {
+    "hands": {
+      "training_checkpoint_filename": "VapGPT_30Hz_ad20s_134_enc-tuned_seed10-epoch15-val_2.87460.ckpt",
+      "training_checkpoint_sha256": "17079ed87064f232e9d5476d0b7ce534bad1a8f5a7dc7df10a6ccf7a74091ebc",
+      "model_config": {
+        "sample_rate": 16000,
+        "frame_hz": 30,
+        "bin_times": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "encoder_type": "pose",
+        "cpc_model_pt": "default",
+        "linear_in_dim": 0,
+        "pose_modalities": "hands",
+        "pose_fusion": "concat",
+        "pose_dim_total": 411,
+        "freeze_encoder": 0,
+        "load_pretrained": 1,
+        "only_feature_extraction": 0,
+        "dim": 256,
+        "channel_layers": 1,
+        "cross_layers": 3,
+        "num_heads": 4,
+        "dropout": 0.1,
+        "context_limit": -1,
+        "context_limit_cpc_sec": -1,
+        "lid_classify": 0,
+        "lid_classify_num_class": 3,
+        "lid_classify_adversarial": 0,
+        "lang_cond": 0
+      },
+      "checkpoint_pytorch_lightning_version": "2.6.0"
+    },
+    "eyes": {
+      "training_checkpoint_filename": "VapGPT_30Hz_ad20s_134_enc-tuned_seed10-epoch24-val_3.24483.ckpt",
+      "training_checkpoint_sha256": "9be473c105090120969d01814ee955d0d36cb7e2fc23472921452c64ded765eb",
+      "model_config": {
+        "sample_rate": 16000,
+        "frame_hz": 30,
+        "bin_times": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "encoder_type": "pose",
+        "cpc_model_pt": "default",
+        "linear_in_dim": 0,
+        "pose_modalities": "eyes",
+        "pose_fusion": "concat",
+        "pose_dim_total": 411,
+        "freeze_encoder": 0,
+        "load_pretrained": 1,
+        "only_feature_extraction": 0,
+        "dim": 256,
+        "channel_layers": 1,
+        "cross_layers": 3,
+        "num_heads": 4,
+        "dropout": 0.1,
+        "context_limit": -1,
+        "context_limit_cpc_sec": -1,
+        "lid_classify": 0,
+        "lid_classify_num_class": 3,
+        "lid_classify_adversarial": 0,
+        "lang_cond": 0
+      },
+      "checkpoint_pytorch_lightning_version": "2.6.0"
+    },
+    "mouth": {
+      "training_checkpoint_filename": "VapGPT_30Hz_ad20s_134_enc-tuned_seed10-epoch27-val_3.07636.ckpt",
+      "training_checkpoint_sha256": "5561d023e91abf8ade13fcb3a7532270fcd9d48dab436e70c4225cd3709f4687",
+      "model_config": {
+        "sample_rate": 16000,
+        "frame_hz": 30,
+        "bin_times": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "encoder_type": "pose",
+        "cpc_model_pt": "default",
+        "linear_in_dim": 0,
+        "pose_modalities": "mouth",
+        "pose_fusion": "concat",
+        "pose_dim_total": 411,
+        "freeze_encoder": 0,
+        "load_pretrained": 1,
+        "only_feature_extraction": 0,
+        "dim": 256,
+        "channel_layers": 1,
+        "cross_layers": 3,
+        "num_heads": 4,
+        "dropout": 0.1,
+        "context_limit": -1,
+        "context_limit_cpc_sec": -1,
+        "lid_classify": 0,
+        "lid_classify_num_class": 3,
+        "lid_classify_adversarial": 0,
+        "lang_cond": 0
+      },
+      "checkpoint_pytorch_lightning_version": "2.6.0"
+    },
+    "hands_eyes_mouth": {
+      "training_checkpoint_filename": "VapGPT_30Hz_ad20s_134_enc-tuned_seed10-epoch18-val_2.85539.ckpt",
+      "training_checkpoint_sha256": "71af2497bd321da09b63e271a817735caeef2c68fc31645a56afc4f9db5372db",
+      "model_config": {
+        "sample_rate": 16000,
+        "frame_hz": 30,
+        "bin_times": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "encoder_type": "pose",
+        "cpc_model_pt": "default",
+        "linear_in_dim": 0,
+        "pose_modalities": "hands,eyes,mouth",
+        "pose_fusion": "concat",
+        "pose_dim_total": 411,
+        "freeze_encoder": 0,
+        "load_pretrained": 1,
+        "only_feature_extraction": 0,
+        "dim": 256,
+        "channel_layers": 1,
+        "cross_layers": 3,
+        "num_heads": 4,
+        "dropout": 0.1,
+        "context_limit": -1,
+        "context_limit_cpc_sec": -1,
+        "lid_classify": 0,
+        "lid_classify_num_class": 3,
+        "lid_classify_adversarial": 0,
+        "lang_cond": 0
+      },
+      "checkpoint_pytorch_lightning_version": "2.6.0"
+    }
+  },
+  "original_source_sha256": {
+    "MaAI-main/train/events.py": "1c113b370ba508a1c84586d3d31dd22217a33d2c6be1fb9822976ee5f8afdfd2",
+    "MaAI-main/train/objective.py": "2dbb5853d46566d24fe48e14ecc544e66c812392aab9873426fd31915b987484",
+    "MaAI-main/train/train_hands.py": "b326ccab5cd48529091beefc7b4930c8a43d9e82e1be7b19114403aef5faca7f",
+    "MaAI-main/train/eval_macro_from_summary.py": "995159fe83f9fe7cf270326e34d8adf8da5ba21ab021626724e40edd3af8132d",
+    "MaAI-main/train/datamodule.py": "0b80f5ccce36d22b0402bbe9c2d916fbf047eb7c96fce3f913f708d1bfb65fdb",
+    "MaAI-main/train/run_eval_macro.sh": "f76cff05e33832529e6dbedcaa96e49fcd9d2a4b2b351f36c52577fb8ad4e89a"
+  },
+  "recording_protocols": {
+    "ani1": {
+      "protocol": {
+        "recording_id": "FO_09_10_AniN",
+        "features_sha256": "b48509912234ca302588ba7b25fa3d0c2cea675465e013d2322d333386919b3b",
+        "frame_hz": 30,
+        "resampling": "nearest_legacy",
+        "label_raster": "legacy_floor_ceil",
+        "label_window": "maai_roundtrip",
+        "analysis_ranges_ms": [
+          [
+            0,
+            296213
+          ]
+        ],
+        "roi_xywh": {
+          "left": [
+            0,
+            0,
+            397,
+            720
+          ],
+          "right": [
+            397,
+            0,
+            398,
+            720
+          ]
+        },
+        "n_windows": 14,
+        "n_scored_frames": 8400
+      },
+      "starts": [
+        0,
+        600,
+        1200,
+        1800,
+        2400,
+        3000,
+        3600,
+        4200,
+        4800,
+        5400,
+        6000,
+        6600,
+        7200,
+        7800
+      ],
+      "roi_reviewed": true,
+      "analysis_ranges_reviewed": false,
+      "max_positive_resampling_lookahead_ms": 8.342000000027383
+    },
+    "cur1": {
+      "protocol": {
+        "recording_id": "IS_09_10_Cur",
+        "features_sha256": "e042a1a419b34e65305e62766efeb40c34344fd1ae20bdc79ddd3bf57d7e784e",
+        "frame_hz": 30,
+        "resampling": "nearest_legacy",
+        "label_raster": "legacy_floor_ceil",
+        "label_window": "maai_roundtrip",
+        "analysis_ranges_ms": [
+          [
+            0,
+            327344
+          ]
+        ],
+        "roi_xywh": {
+          "left": [
+            0,
+            0,
+            397,
+            720
+          ],
+          "right": [
+            397,
+            0,
+            397,
+            720
+          ]
+        },
+        "n_windows": 16,
+        "n_scored_frames": 9600
+      },
+      "starts": [
+        0,
+        600,
+        1200,
+        1800,
+        2400,
+        3000,
+        3600,
+        4200,
+        4800,
+        5400,
+        6000,
+        6600,
+        7200,
+        7800,
+        8400,
+        9000
+      ],
+      "roi_reviewed": true,
+      "analysis_ranges_reviewed": false,
+      "max_positive_resampling_lookahead_ms": 8.342000000027383
+    },
+    "pro1": {
+      "protocol": {
+        "recording_id": "NS_11_12_Pro",
+        "features_sha256": "f19f1061d638833416f4340c228466e317a0151639e2c1a3e18c56f15a118549",
+        "frame_hz": 30,
+        "resampling": "nearest_legacy",
+        "label_raster": "legacy_floor_ceil",
+        "label_window": "maai_roundtrip",
+        "analysis_ranges_ms": [
+          [
+            0,
+            305923
+          ]
+        ],
+        "roi_xywh": {
+          "left": [
+            0,
+            0,
+            397,
+            720
+          ],
+          "right": [
+            397,
+            0,
+            397,
+            720
+          ]
+        },
+        "n_windows": 15,
+        "n_scored_frames": 9000
+      },
+      "starts": [
+        0,
+        600,
+        1200,
+        1800,
+        2400,
+        3000,
+        3600,
+        4200,
+        4800,
+        5400,
+        6000,
+        6600,
+        7200,
+        7800,
+        8400
+      ],
+      "roi_reviewed": true,
+      "analysis_ranges_reviewed": false,
+      "max_positive_resampling_lookahead_ms": 8.342000000027383
+    },
+    "ani2": {
+      "protocol": {
+        "recording_id": "IK_01_02_AniN",
+        "features_sha256": "eb2b570432a05b83b195c4ce88f73359257cde32a3fbe3bfcd2eb6cc735f5644",
+        "frame_hz": 30,
+        "resampling": "nearest_legacy",
+        "label_raster": "legacy_floor_ceil",
+        "label_window": "maai_roundtrip",
+        "analysis_ranges_ms": [
+          [
+            0,
+            440507
+          ]
+        ],
+        "roi_xywh": {
+          "left": [
+            0,
+            0,
+            397,
+            720
+          ],
+          "right": [
+            397,
+            0,
+            397,
+            720
+          ]
+        },
+        "n_windows": 21,
+        "n_scored_frames": 12600
+      },
+      "starts": [
+        0,
+        600,
+        1200,
+        1800,
+        2400,
+        3000,
+        3600,
+        4200,
+        4800,
+        5400,
+        6000,
+        6600,
+        7200,
+        7800,
+        8400,
+        9000,
+        9600,
+        10200,
+        10800,
+        11400,
+        12000
+      ],
+      "roi_reviewed": true,
+      "analysis_ranges_reviewed": false,
+      "max_positive_resampling_lookahead_ms": 8.342000000027383
+    },
+    "cur2": {
+      "protocol": {
+        "recording_id": "IK_05_06_Cur",
+        "features_sha256": "ebdaac00e29e494985bf7e84767e66b9939c8ef73e794e0927347faaac49da49",
+        "frame_hz": 30,
+        "resampling": "nearest_legacy",
+        "label_raster": "legacy_floor_ceil",
+        "label_window": "maai_roundtrip",
+        "analysis_ranges_ms": [
+          [
+            0,
+            501318
+          ]
+        ],
+        "roi_xywh": {
+          "left": [
+            0,
+            0,
+            397,
+            720
+          ],
+          "right": [
+            397,
+            0,
+            397,
+            720
+          ]
+        },
+        "n_windows": 24,
+        "n_scored_frames": 14400
+      },
+      "starts": [
+        0,
+        600,
+        1200,
+        1800,
+        2400,
+        3000,
+        3600,
+        4200,
+        4800,
+        5400,
+        6000,
+        6600,
+        7200,
+        7800,
+        8400,
+        9000,
+        9600,
+        10200,
+        10800,
+        11400,
+        12000,
+        12600,
+        13200,
+        13800
+      ],
+      "roi_reviewed": true,
+      "analysis_ranges_reviewed": false,
+      "max_positive_resampling_lookahead_ms": 8.342000000027383
+    },
+    "pro2": {
+      "protocol": {
+        "recording_id": "IK_03_04_Pro",
+        "features_sha256": "e546367327ece3714aaa268c951bc2c5c87ca9dd95234da875f7c9979ac10ba3",
+        "frame_hz": 30,
+        "resampling": "nearest_legacy",
+        "label_raster": "legacy_floor_ceil",
+        "label_window": "maai_roundtrip",
+        "analysis_ranges_ms": [
+          [
+            0,
+            397598
+          ]
+        ],
+        "roi_xywh": {
+          "left": [
+            0,
+            0,
+            397,
+            720
+          ],
+          "right": [
+            397,
+            0,
+            397,
+            720
+          ]
+        },
+        "n_windows": 19,
+        "n_scored_frames": 11400
+      },
+      "starts": [
+        0,
+        600,
+        1200,
+        1800,
+        2400,
+        3000,
+        3600,
+        4200,
+        4800,
+        5400,
+        6000,
+        6600,
+        7200,
+        7800,
+        8400,
+        9000,
+        9600,
+        10200,
+        10800
+      ],
+      "roi_reviewed": true,
+      "analysis_ranges_reviewed": false,
+      "max_positive_resampling_lookahead_ms": 8.342000000027383
+    }
+  },
+  "event_counts": [
+    {
+      "tag": "ani1",
+      "recording_id": "FO_09_10_AniN",
+      "n_evaluated_windows": 14,
+      "raw_shift": 0,
+      "raw_hold": 0,
+      "raw_pred_shift": 0,
+      "raw_pred_hold": 0,
+      "shift_n_selected_events": 0,
+      "shift_n_nonempty_scored_events": 0,
+      "shift_n_scored_frames": 0,
+      "hold_n_selected_events": 0,
+      "hold_n_nonempty_scored_events": 0,
+      "hold_n_scored_frames": 0,
+      "pred_shift_n_selected_events": 0,
+      "pred_shift_n_nonempty_scored_events": 0,
+      "pred_shift_n_scored_frames": 0,
+      "pred_shift_neg_n_selected_events": 0,
+      "pred_shift_neg_n_nonempty_scored_events": 0,
+      "pred_shift_neg_n_scored_frames": 0
+    },
+    {
+      "tag": "cur1",
+      "recording_id": "IS_09_10_Cur",
+      "n_evaluated_windows": 16,
+      "raw_shift": 4,
+      "raw_hold": 6,
+      "raw_pred_shift": 4,
+      "raw_pred_hold": 6,
+      "shift_n_selected_events": 4,
+      "shift_n_nonempty_scored_events": 4,
+      "shift_n_scored_frames": 381,
+      "hold_n_selected_events": 4,
+      "hold_n_nonempty_scored_events": 4,
+      "hold_n_scored_frames": 321,
+      "pred_shift_n_selected_events": 4,
+      "pred_shift_n_nonempty_scored_events": 4,
+      "pred_shift_n_scored_frames": 60,
+      "pred_shift_neg_n_selected_events": 4,
+      "pred_shift_neg_n_nonempty_scored_events": 4,
+      "pred_shift_neg_n_scored_frames": 60
+    },
+    {
+      "tag": "pro1",
+      "recording_id": "NS_11_12_Pro",
+      "n_evaluated_windows": 15,
+      "raw_shift": 0,
+      "raw_hold": 0,
+      "raw_pred_shift": 0,
+      "raw_pred_hold": 0,
+      "shift_n_selected_events": 0,
+      "shift_n_nonempty_scored_events": 0,
+      "shift_n_scored_frames": 0,
+      "hold_n_selected_events": 0,
+      "hold_n_nonempty_scored_events": 0,
+      "hold_n_scored_frames": 0,
+      "pred_shift_n_selected_events": 0,
+      "pred_shift_n_nonempty_scored_events": 0,
+      "pred_shift_n_scored_frames": 0,
+      "pred_shift_neg_n_selected_events": 0,
+      "pred_shift_neg_n_nonempty_scored_events": 0,
+      "pred_shift_neg_n_scored_frames": 0
+    },
+    {
+      "tag": "ani2",
+      "recording_id": "IK_01_02_AniN",
+      "n_evaluated_windows": 21,
+      "raw_shift": 1,
+      "raw_hold": 5,
+      "raw_pred_shift": 1,
+      "raw_pred_hold": 5,
+      "shift_n_selected_events": 1,
+      "shift_n_nonempty_scored_events": 1,
+      "shift_n_scored_frames": 17,
+      "hold_n_selected_events": 1,
+      "hold_n_nonempty_scored_events": 1,
+      "hold_n_scored_frames": 40,
+      "pred_shift_n_selected_events": 1,
+      "pred_shift_n_nonempty_scored_events": 1,
+      "pred_shift_n_scored_frames": 15,
+      "pred_shift_neg_n_selected_events": 1,
+      "pred_shift_neg_n_nonempty_scored_events": 1,
+      "pred_shift_neg_n_scored_frames": 15
+    },
+    {
+      "tag": "cur2",
+      "recording_id": "IK_05_06_Cur",
+      "n_evaluated_windows": 24,
+      "raw_shift": 0,
+      "raw_hold": 0,
+      "raw_pred_shift": 0,
+      "raw_pred_hold": 0,
+      "shift_n_selected_events": 0,
+      "shift_n_nonempty_scored_events": 0,
+      "shift_n_scored_frames": 0,
+      "hold_n_selected_events": 0,
+      "hold_n_nonempty_scored_events": 0,
+      "hold_n_scored_frames": 0,
+      "pred_shift_n_selected_events": 0,
+      "pred_shift_n_nonempty_scored_events": 0,
+      "pred_shift_n_scored_frames": 0,
+      "pred_shift_neg_n_selected_events": 0,
+      "pred_shift_neg_n_nonempty_scored_events": 0,
+      "pred_shift_neg_n_scored_frames": 0
+    },
+    {
+      "tag": "pro2",
+      "recording_id": "IK_03_04_Pro",
+      "n_evaluated_windows": 19,
+      "raw_shift": 2,
+      "raw_hold": 1,
+      "raw_pred_shift": 2,
+      "raw_pred_hold": 1,
+      "shift_n_selected_events": 2,
+      "shift_n_nonempty_scored_events": 2,
+      "shift_n_scored_frames": 33,
+      "hold_n_selected_events": 1,
+      "hold_n_nonempty_scored_events": 1,
+      "hold_n_scored_frames": 61,
+      "pred_shift_n_selected_events": 2,
+      "pred_shift_n_nonempty_scored_events": 2,
+      "pred_shift_n_scored_frames": 30,
+      "pred_shift_neg_n_selected_events": 1,
+      "pred_shift_neg_n_nonempty_scored_events": 1,
+      "pred_shift_neg_n_scored_frames": 15
+    },
+    {
+      "tag": "ALL_POOLED",
+      "recording_id": "ALL_POOLED",
+      "n_evaluated_windows": 109,
+      "raw_shift": 7,
+      "raw_hold": 12,
+      "raw_pred_shift": 7,
+      "raw_pred_hold": 12,
+      "shift_n_selected_events": 7,
+      "shift_n_nonempty_scored_events": 7,
+      "shift_n_scored_frames": 431,
+      "hold_n_selected_events": 6,
+      "hold_n_nonempty_scored_events": 6,
+      "hold_n_scored_frames": 422,
+      "pred_shift_n_selected_events": 7,
+      "pred_shift_n_nonempty_scored_events": 7,
+      "pred_shift_n_scored_frames": 105,
+      "pred_shift_neg_n_selected_events": 6,
+      "pred_shift_neg_n_nonempty_scored_events": 6,
+      "pred_shift_neg_n_scored_frames": 90
+    }
+  ],
+  "event_manifest_sha256": "94fac7ea462a69539f6dade8481f9b099cf1a3359e7f9e26d3eba4292fd72fd5",
+  "event_manifest_hash_serialization": "SHA256 of UTF-8 json.dumps(events, ensure_ascii=False, sort_keys=True, separators=(\",\", \":\"))",
+  "source_run_environment": {
+    "python": "3.10.12",
+    "numpy": "1.23.5",
+    "torch": "2.3.0+cu118",
+    "cpu_threads": 4,
+    "device": "cpu"
+  },
+  "prediction_provenance": {
+    "hands": [
+      {
+        "recording_tag": "ani1",
+        "prediction_filename": "FO_09_10_AniN.predictions.npz",
+        "prediction_sha256": "4fa28a2aec050daf2a93e6395a752c1fd477c8ee84de8b4ab67e4d8e05ad14cc",
+        "source_projection_summary_sha256": "6d837037174cde36904eed8739b1aa7b529a097cc84810ebc11bd87bcf26b8f5"
+      },
+      {
+        "recording_tag": "cur1",
+        "prediction_filename": "IS_09_10_Cur.predictions.npz",
+        "prediction_sha256": "8fbe705cc4113b8d23c5c2f952d9987953dc7221f0250df6e3728f5a1d2b0d07",
+        "source_projection_summary_sha256": "9a03d0d76d46c68eb14f6dd84cde916ad78895ce9520f5f03720161189753981"
+      },
+      {
+        "recording_tag": "pro1",
+        "prediction_filename": "NS_11_12_Pro.predictions.npz",
+        "prediction_sha256": "1eb02a52dc9199a5a5793588865bbc9f61a01da3e6f465ff3fca45d975dde895",
+        "source_projection_summary_sha256": "7bda08ea7454288a220ad20028b318285cb1c43bf0971857a13adb29a662e1d3"
+      },
+      {
+        "recording_tag": "ani2",
+        "prediction_filename": "IK_01_02_AniN.predictions.npz",
+        "prediction_sha256": "baacde49629f00bc7ed0fa42b4f4891e961e597e9b44034848d026881b0e58f2",
+        "source_projection_summary_sha256": "e9c96e0b675a48357341f0154a54f74387d4ad0bf1afd6d869cef0b8c143b2d6"
+      },
+      {
+        "recording_tag": "cur2",
+        "prediction_filename": "IK_05_06_Cur.predictions.npz",
+        "prediction_sha256": "620b3e268a0cfca31fcec570018fab1af95fe4e5dc36b35ec75fa4daa009c1a4",
+        "source_projection_summary_sha256": "db494f32bbc7e622444b846034a572d2300526597cbcea67b814bb3e0bb0e22c"
+      },
+      {
+        "recording_tag": "pro2",
+        "prediction_filename": "IK_03_04_Pro.predictions.npz",
+        "prediction_sha256": "c49fdc2e11f0e46b23ff1df6932e1a43310d749ec0e82193ff6dd4e46ab219b1",
+        "source_projection_summary_sha256": "035d6d8fc295096413c870d16c44b72c39b811ecc7ecf91a09f20c839a4cbad3"
+      }
+    ],
+    "eyes": [
+      {
+        "recording_tag": "ani1",
+        "prediction_filename": "FO_09_10_AniN.predictions.npz",
+        "prediction_sha256": "04b181929d5de9a3b5dfc40b7e673d696706a63f37108f733eaf5550b5aacca5",
+        "source_projection_summary_sha256": "1f9f9f4781ac67b671e69ae3fa919416c0509d185548bef8aeb7b9a8c1b61d71"
+      },
+      {
+        "recording_tag": "cur1",
+        "prediction_filename": "IS_09_10_Cur.predictions.npz",
+        "prediction_sha256": "b68f47a9cad6ca25844fb285c5d1470ead9b8c69812eca8d5420c8e4630258dc",
+        "source_projection_summary_sha256": "5956b066912d3187c6b83a7b04883dae6921394050b7863e3c8ed5795c8c9c2d"
+      },
+      {
+        "recording_tag": "pro1",
+        "prediction_filename": "NS_11_12_Pro.predictions.npz",
+        "prediction_sha256": "ed39d715dbfe4c8bf103d892b84785af5d51500b6c7592d7636bf092260da508",
+        "source_projection_summary_sha256": "0c5fb903c98fd886c7d752f2cd501781af3373333eee286f0ca390fb3f4aaddb"
+      },
+      {
+        "recording_tag": "ani2",
+        "prediction_filename": "IK_01_02_AniN.predictions.npz",
+        "prediction_sha256": "8ece907a4dd4acef85b1e94cbfe2cc29db1b03be754bbb95e27fe5cb5be0aeb4",
+        "source_projection_summary_sha256": "f58432986f4bd94ce1723c5c8661d2e27c58fc29e7372124914077b2ddc0d82b"
+      },
+      {
+        "recording_tag": "cur2",
+        "prediction_filename": "IK_05_06_Cur.predictions.npz",
+        "prediction_sha256": "64f29cb9d53f7295e8e4ccea1b9ad2f5947a39562cadbb346ef12fe531f1951d",
+        "source_projection_summary_sha256": "bd4e7692cf6e57de26a0dca6d44031f8e63f5cea8b608a1b342080d4382240ef"
+      },
+      {
+        "recording_tag": "pro2",
+        "prediction_filename": "IK_03_04_Pro.predictions.npz",
+        "prediction_sha256": "a5b07be9ed7ef9475529bd81b5c2e8e76c2bb0ade73ddbcd73c98cc71f8282da",
+        "source_projection_summary_sha256": "ff4261443e48b994b0adf526f57711e2322d36d2f0dbb1d0bfb8eaf38bb42da1"
+      }
+    ],
+    "mouth": [
+      {
+        "recording_tag": "ani1",
+        "prediction_filename": "FO_09_10_AniN.predictions.npz",
+        "prediction_sha256": "c4225094383477fd89a9f4e5d5630107eb7f1792296cb5cff764533613327a30",
+        "source_projection_summary_sha256": "c11c2592f0b26af68b91a7f05f0db4adc7d3437a95e4c2a92988bd45779720b3"
+      },
+      {
+        "recording_tag": "cur1",
+        "prediction_filename": "IS_09_10_Cur.predictions.npz",
+        "prediction_sha256": "7895e784a77e6fc847e367c46ec72c889796c544d61322802c157390dfa74988",
+        "source_projection_summary_sha256": "876c2f871061b8458bde39e868342896d81cbb5ddc41ca436a7523019fe772bb"
+      },
+      {
+        "recording_tag": "pro1",
+        "prediction_filename": "NS_11_12_Pro.predictions.npz",
+        "prediction_sha256": "7c56c15a1c8e086c9d8139879f84229a11e4fad7f81ce450bc036078791da321",
+        "source_projection_summary_sha256": "3d6138623ff37996e90803adea572120028a7e2ed291469f89ca896695b1cabe"
+      },
+      {
+        "recording_tag": "ani2",
+        "prediction_filename": "IK_01_02_AniN.predictions.npz",
+        "prediction_sha256": "8bf00a2a371cae758c90c38a8bee8b66a3bfe2391702282eaaa79b771153a266",
+        "source_projection_summary_sha256": "6901537c17090ac0c1848dfe8038464fb9e72f1925e8b2c57e52d2b66ade9f49"
+      },
+      {
+        "recording_tag": "cur2",
+        "prediction_filename": "IK_05_06_Cur.predictions.npz",
+        "prediction_sha256": "d9fd94036fa0e3463041ffd42ebba021c869d6ec149751c1c84a98ce0899b7b0",
+        "source_projection_summary_sha256": "1cd039b24f561899ab10600c548c54b1887ce63e5a4f35728c8a5d972e4348fa"
+      },
+      {
+        "recording_tag": "pro2",
+        "prediction_filename": "IK_03_04_Pro.predictions.npz",
+        "prediction_sha256": "d83dc07c70c5542c84181f88a62a3d3f0f1b359152d4663fbcc359d6ecb5bd24",
+        "source_projection_summary_sha256": "1b185f7e28761548bf0f441dec1d6f0797c3cb6a6447dea73eef4bdc28341d49"
+      }
+    ],
+    "hands_eyes_mouth": [
+      {
+        "recording_tag": "ani1",
+        "prediction_filename": "FO_09_10_AniN.predictions.npz",
+        "prediction_sha256": "867d3fb03ae07608e8b72b5bde7a0ad3c79e4fdad4236fa1c00580b52ad35ee2",
+        "source_projection_summary_sha256": "21703d0fbf6460009dee0adc16b7358f3bee78990e53b410be99872b70355de4"
+      },
+      {
+        "recording_tag": "cur1",
+        "prediction_filename": "IS_09_10_Cur.predictions.npz",
+        "prediction_sha256": "dfc4ee4ff2f34b4ad4e78af9b45db55c5fb262e718c2c768764c6d0dc8f30aed",
+        "source_projection_summary_sha256": "080a0aec63d346f20836c6ac09990e242d147e79f95347d0a3d0691505c1e6ca"
+      },
+      {
+        "recording_tag": "pro1",
+        "prediction_filename": "NS_11_12_Pro.predictions.npz",
+        "prediction_sha256": "beb84ece022a6d8a97f93e127f0a1723e2f428f10a81e5e85b802bf4efc60d38",
+        "source_projection_summary_sha256": "e692cd561a8be1d0c8cbe0bb2f4cb28f3a49808bfff04d2f362d50c418077a8f"
+      },
+      {
+        "recording_tag": "ani2",
+        "prediction_filename": "IK_01_02_AniN.predictions.npz",
+        "prediction_sha256": "3bb69359da09309037ddd01088fbaff14123811b4123187b508026c8e199c4b5",
+        "source_projection_summary_sha256": "103bc6725e0356b69224bf8a26574d168b35b2f23d8dc0621dddfee87cba822f"
+      },
+      {
+        "recording_tag": "cur2",
+        "prediction_filename": "IK_05_06_Cur.predictions.npz",
+        "prediction_sha256": "d29b1a278c6c7e497182e36fa3ba60966c3db81f143f628359841a06567821f0",
+        "source_projection_summary_sha256": "6208b0fc00bf6e2433fa0196b6320272a4a6389493dd441d2be9b104d830c025"
+      },
+      {
+        "recording_tag": "pro2",
+        "prediction_filename": "IK_03_04_Pro.predictions.npz",
+        "prediction_sha256": "a921aa8ed3aaa95cb029aa8efeafda45773572b98facad58f532f4f1f9d7fa28",
+        "source_projection_summary_sha256": "121e132e4d33ca747785add8123ccfafe6369a498981e833ba17f70331395d0b"
+      }
+    ]
+  },
+  "source_run_notes": [
+    "Original TurnTakingEvents and ObjectiveVAP scoring are imported without edits.",
+    "All four variants use exactly the same sampled events. No test-threshold optimization.",
+    "Full mutual inactivity intervals are scored for hs. metric_time/pad only determine minimum silence in this source.",
+    "pred_shift uses the 0.5 s interval before mutual inactivity and p_future from bins 2/3 (0.6-2.0 s).",
+    "This source does NOT implement a general classifier for a shift within the next 600 ms.",
+    "Round uses torch.round; exact 0.5 becomes 0. No second softmax is applied to saved probabilities.",
+    "The original training test_f1_* fields use weighted-F1; macro-F1 is separately computed here.",
+    "Frame samples are correlated, not independent events. Both frame and interval counts are reported.",
+    "No-event/one-class primary scores are N/A, not zero. Raw zero-division compatibility fields are separate.",
+    "Historical DGS data, RNG history, and paper scores are not reproduced by this JSL postprocessing."
+  ],
+  "source_summary_sha256": "5442e38eb45af91b65819d129ca513d362a10cbdb782ef18e16179c7e805c866",
+  "source_baseline_table_sha256": "99f6ac5fedfb711f98e2b41290dbacb6f56c09d4e1ef55bb746aa4d64319f394",
+  "data_file_sha256": {
+    "metrics.csv": "528cad72ab106baa9bb9351d214651d6ad70153fb042781f9967d19fee5de961",
+    "event_counts.csv": "f2067a42821ed0b7e98cda51937834798e5f2d1ef7919a19df1817cf34af6c46",
+    "event_manifest.csv": "2bbc33134c23878462d0502b6dc813d1cf1ba5bcdf5a2b35aaf291a1e4bdf73b",
+    "per_window_event_counts.csv": "8d736eea52eb618da9a3e8c5b38e85b0b49d78bb8140fb84e94aa99e44d226a0"
+  },
+  "validation_scope": "Metrics recomputed from the supplied confusion matrices; event manifests, supports, per-window counts and pooled counts cross-checked. No model inference or event extraction rerun."
+}

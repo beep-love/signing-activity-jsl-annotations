@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "format": "tensor_state_dict_plus_json",
+  "default_variant": "eyes",
+  "variants": [
+    {
+      "name": "hands",
+      "descriptor": "hands.json",
+      "weights": "hands.pt",
+      "sha256": "428b20ff56fc846906a328e430926e1533175630b22766719515c80082fb3344",
+      "size_bytes": 14605938
+    },
+    {
+      "name": "eyes",
+      "descriptor": "eyes.json",
+      "weights": "eyes.pt",
+      "sha256": "4fc0674bf1f6a003208f150ceb93585ca45e5fc222a39df12fde6c36ddb57d53",
+      "size_bytes": 14519858
+    },
+    {
+      "name": "mouth",
+      "descriptor": "mouth.json",
+      "weights": "mouth.pt",
+      "sha256": "d10bac10e319a4c0fa79d3a6d5731e9fa1cce148c73ab53cabb9e1e84fcc2b9f",
+      "size_bytes": 14538354
+    },
+    {
+      "name": "hands_eyes_mouth",
+      "descriptor": "hands_eyes_mouth.json",
+      "weights": "hands_eyes_mouth.pt",
+      "sha256": "35615a7c5721c0386cc433f551679a13b56f831fa2b22aceb364b2b9005e2a2e",
+      "size_bytes": 43643902
+    }
+  ]
+}
